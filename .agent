@@ -1,0 +1,40 @@
+# Agent Guidelines & Project Notes
+
+## 1. Project Scope & Architecture
+- **Project:** Ahjar Oloum Store (متجر أحجار و علوم | Haute Gemology & Lapidary Science)
+- **Status:** **UI DEMO ONLY**.
+  - All interactive elements are demo-only UI placeholders unless explicitly requested.
+  - The Search and Cart actions are UI icons only (no opening search bar, no cart checkout logic).
+  - Language is primarily Arabic (`dir="rtl"`).
+
+## 2. Design System & Palette
+
+### Colors (Tailwind v4 `@theme inline`)
+- **Primary (`#D4AF37`):** Gold highlight, primary action buttons, luxury accent details.
+  - Available in shades `primary-50` through `primary-900`.
+- **Secondary (`#0F4C81`):** Deep royal blue, headers, navigation elements.
+  - Available in shades `secondary-50` through `secondary-900`.
+- **Tertiary (`#0284C7`):** Ocean sky blue, links, badges, interactive accents.
+  - Available in shades `tertiary-50` through `tertiary-900`.
+- **Neutral (`#24211C`):** Charcoal dark espresso, body typography, dark surfaces.
+  - Available in shades `neutral-50` through `neutral-900`.
+
+### Typography
+- **Cairo (`font-cairo`):** Default UI body font, navigation, and structured subheadings.
+- **Lalezar (`font-lalezar`):** Heritage Arabic display font for main brand titles and hero headlines.
+- **Lemonada (`font-lemonada`):** Contemporary cursive font for accent badges, prices, and special titles.
+- **Typography Levels:**
+  - 1. Title
+  - 2. Subtitle
+  - 3. Regular
+
+## 3. Iconography
+- Standard icon library: **Hugeicons** (`@hugeicons/react` / `@hugeicons/core-free-icons`).
+
+## 4. Navigation & Layout
+- Header component must feature:
+  - Middle: **"أحجار و علوم"** (Brand Logo / Name)
+  - Links: **"من نحن"** (About Us), **"اتصل بنا"** (Contact Us)
+  - Action Icons: **Search** & **Cart** (display-only UI icons)
+  - Responsive design with mobile drawer/menu toggle
+

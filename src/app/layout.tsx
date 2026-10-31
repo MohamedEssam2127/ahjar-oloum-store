@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cairo, Lalezar, Lemonada } from "next/font/google";
 import "@/styles/globals.css";
+import Header from "@/components/Header";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -24,8 +25,8 @@ const lemonada = Lemonada({
 });
 
 export const metadata: Metadata = {
-  title: "أحجار العلوم | Haute Gemology & Lapidary Science",
-  description: "متجر أحجار العلوم - Haute Gemology & Lapidary Science Store",
+  title: "أحجار و علوم | علم وصياغة الأحجار الكريمة",
+  description: "متجر أحجار و علوم للأحجار الكريمة والمعادن النادرة",
 };
 
 export default function RootLayout({
@@ -39,8 +40,9 @@ export default function RootLayout({
       dir="rtl"
       className={`${cairo.variable} ${lalezar.variable} ${lemonada.variable}`}
     >
-      <body className="font-cairo antialiased bg-[#fdfdfc] text-[#24211C]">
-        {children}
+      <body className="font-cairo antialiased bg-[#FAF9F6] text-[#24211C] min-h-screen flex flex-col">
+        <Header />
+        <div className="flex-1">{children}</div>
       </body>
     </html>
   );
