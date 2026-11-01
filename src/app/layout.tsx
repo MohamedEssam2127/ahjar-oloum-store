@@ -31,6 +31,11 @@ const elMessiri = El_Messiri({
 export const metadata: Metadata = {
   title: "أحجار و علوم | علم وصياغة الأحجار الكريمة",
   description: "متجر أحجار و علوم للأحجار الكريمة والمعادن النادرة",
+  icons: {
+    icon: "/brand_icon.jpeg",
+    shortcut: "/brand_icon.jpeg",
+    apple: "/brand_icon.jpeg",
+  },
 };
 
 export default function RootLayout({
