@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cairo, Lalezar, Lemonada } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -40,9 +41,10 @@ export default function RootLayout({
       dir="rtl"
       className={`${cairo.variable} ${lalezar.variable} ${lemonada.variable}`}
     >
-      <body className="font-cairo antialiased bg-[#FAF9F6] text-[#24211C] min-h-screen flex flex-col">
+      <body suppressHydrationWarning className="font-cairo antialiased bg-[#FAF9F6] text-[#24211C] min-h-screen flex flex-col">
         <Header />
         <div className="flex-1">{children}</div>
+        <Footer/>
       </body>
     </html>
   );
