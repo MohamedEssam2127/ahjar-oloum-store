@@ -142,7 +142,7 @@ export default function Header() {
               onChange={(event) => setSearchTerm(event.target.value)}
               placeholder="ابحث باسم الحجر أو اللون أو المنشأ"
               aria-label="ابحث في مجموعة الأحجار"
-              className="min-w-0 flex-1 bg-transparent font-body text-sm text-secondary outline-none placeholder:text-neutral-400"
+              className="min-w-0 flex-1 bg-transparent font-body text-base text-secondary outline-none placeholder:text-neutral-400 sm:text-sm"
             />
             <button
               type="submit"
