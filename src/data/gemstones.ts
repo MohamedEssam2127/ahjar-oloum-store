@@ -253,6 +253,32 @@ export function getGemstoneBySlug(slug: string): Gemstone | undefined {
   return gemstones.find((g) => g.slug === slug);
 }
 
+function normalizeSearchText(value: string): string {
+  return value
+    .toLocaleLowerCase("ar")
+    .replace(/[\u064B-\u065F\u0670\u0640]/g, "")
+    .replace(/[أإآ]/g, "ا")
+    .replace(/ى/g, "ي");
+}
+
+export function searchGemstones(query: string): Gemstone[] {
+  const normalizedQuery = normalizeSearchText(query.trim());
+  if (!normalizedQuery) return gemstones;
+
+  return gemstones.filter((gemstone) => {
+    const searchableText = normalizeSearchText(
+      [
+        gemstone.name,
+        gemstone.title,
+        gemstone.description,
+        gemstone.weight,
+        ...gemstone.specs.flatMap((spec) => [spec.label, spec.value]),
+      ].join(" "),
+    );
+    return searchableText.includes(normalizedQuery);
+  });
+}
+
 export function formatPrice(amount: number, currency = "ج.م"): string {
   return `${currency} ${amount.toLocaleString("ar-EG")}`;
 }

@@ -4,9 +4,9 @@ export const contactInfo = {
   specialtiesTitle: "مجالات التخصص",
   specialties:
     "متخصصون في الأحجار الكريمة الطبيعية: العقيق، الياقوت، الزمرد، الفيروز، والخواتم",
-  phoneDisplay: "010 02331434",
-  phoneHref: "tel:+201002331434",
-  whatsappDisplay: "+20 10 02331434",
+  phoneDisplay: "000 00000000", //010 02331434
+  phoneHref: "tel:+000000000", //010 02331434
+  whatsappDisplay: "+20 000 00000000",
   whatsappHref: "https://wa.me/201002331434",
   email: "slama55000@gmail.com",
   emailHref: "mailto:slama55000@gmail.com",

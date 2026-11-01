@@ -5,12 +5,15 @@ import { Tick02Icon, Video01Icon } from "@hugeicons/core-free-icons";
 import type { Gemstone } from "@/data/gemstones";
 import { formatPrice } from "@/data/gemstones";
 import GemstoneGallery from "@/components/GemstoneGallery";
+import { useStore } from "@/components/StoreProvider";
 
 type GemstoneDetailsProps = {
   gemstone: Gemstone;
 };
 
 export default function GemstoneDetails({ gemstone }: GemstoneDetailsProps) {
+  const { addToCart } = useStore();
+
   return (
     <div className="relative">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-tertiary-100)_0%,_transparent_55%)] opacity-80" />
@@ -57,8 +60,9 @@ export default function GemstoneDetails({ gemstone }: GemstoneDetailsProps) {
 
               <button
                 type="button"
+                onClick={() => addToCart(gemstone)}
                 disabled={!gemstone.inStock}
-                className="w-full font-body text-sm sm:text-base font-semibold tracking-wide bg-secondary text-white py-4 px-6 hover:bg-secondary-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-full bg-secondary px-6 py-4 font-body text-sm font-semibold tracking-wide text-white transition-colors hover:bg-primary-700 disabled:cursor-not-allowed disabled:opacity-40 sm:text-base"
               >
                 أضف إلى السلة
               </button>

@@ -3,6 +3,8 @@ import { Amiri, Aref_Ruqaa, El_Messiri } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CartDrawer from "@/components/CartDrawer";
+import { StoreProvider } from "@/components/StoreProvider";
 
 /* Display — classical Naskh, jewelry-catalog titles */
 const amiri = Amiri({
@@ -53,9 +55,12 @@ export default function RootLayout({
         suppressHydrationWarning
         className="font-body antialiased bg-[#FAF9F6] text-[#24211C] min-h-screen flex flex-col"
       >
-        <Header />
-        <div className="flex-1">{children}</div>
-        <Footer />
+        <StoreProvider>
+          <Header />
+          <CartDrawer />
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );
