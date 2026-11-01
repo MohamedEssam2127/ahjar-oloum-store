@@ -27,7 +27,7 @@ export default function Header() {
               height={120}
               className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
             />
-            <span className="font-lalezar text-lg sm:text-xl text-secondary leading-none">
+            <span className="font-display text-lg sm:text-xl text-secondary leading-none">
               أحجار و علوم
             </span>
           </Link>
@@ -35,17 +35,22 @@ export default function Header() {
           {/* Center: Nav Links (Desktop) */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="/contact"
-              className="font-cairo text-sm font-bold text-neutral-600 hover:text-secondary transition-colors relative pb-1 after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
+              href="/#gemstones"
+              className="font-body text-sm font-bold text-neutral-600 hover:text-secondary transition-colors relative pb-1 after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
             >
-              اتصل بنا
+              الأحجار
             </Link>
-
             <Link
               href="/about"
-              className="font-cairo text-sm font-bold text-neutral-600 hover:text-secondary transition-colors relative pb-1 after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
+              className="font-body text-sm font-bold text-neutral-600 hover:text-secondary transition-colors relative pb-1 after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
             >
               من نحن
+            </Link>
+            <Link
+              href="/contact"
+              className="font-body text-sm font-bold text-neutral-600 hover:text-secondary transition-colors relative pb-1 after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0.5 after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
+            >
+              اتصل بنا
             </Link>
           </nav>
 
@@ -87,16 +92,23 @@ export default function Header() {
         <div className="md:hidden border-t border-neutral-100 bg-white px-6 py-4">
           <nav className="flex flex-col gap-1">
             <Link
+              href="/#gemstones"
+              onClick={() => setMobileMenuOpen(false)}
+              className="font-body text-sm text-neutral-600 hover:text-secondary py-2.5 transition-colors"
+            >
+              الأحجار
+            </Link>
+            <Link
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-cairo text-sm text-neutral-600 hover:text-secondary py-2.5 transition-colors"
+              className="font-body text-sm text-neutral-600 hover:text-secondary py-2.5 transition-colors"
             >
               من نحن
             </Link>
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-cairo text-sm text-neutral-600 hover:text-secondary py-2.5 transition-colors"
+              className="font-body text-sm text-neutral-600 hover:text-secondary py-2.5 transition-colors"
             >
               اتصل بنا
             </Link>

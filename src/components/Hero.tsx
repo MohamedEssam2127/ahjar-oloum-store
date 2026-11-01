@@ -20,20 +20,27 @@ export default function Hero() {
       {/* Text content — centered on mobile, left-aligned on md+ */}
       <div className="relative z-10 w-full px-6 sm:px-8 md:px-12 py-16 sm:py-24 text-center md:text-start space-y-4 sm:space-y-6">
         {/* السطر الأول */}
-        <p className="font-lemonada text-sm sm:text-base md:text-lg lg:text-xl text-primary font-semibold tracking-wide">
+        <p className="font-accent text-base sm:text-lg md:text-xl lg:text-2xl text-primary tracking-wide">
           لكل حجر حكاية... وللجمال أسرار
         </p>
 
         {/* السطر الثاني */}
-        <h1 className="font-lalezar text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white leading-[1.2] drop-shadow-md max-w-3xl mx-auto md:mx-0">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white leading-[1.25] drop-shadow-md max-w-3xl mx-auto md:mx-0">
           اكتشف عالم الأحجار الكريمة
         </h1>
 
         {/* السطر الثالث */}
-        <p className="font-cairo text-sm sm:text-base md:text-lg lg:text-xl text-neutral-200 leading-relaxed sm:leading-loose max-w-2xl mx-auto md:mx-0 font-normal drop-shadow-sm">
+        <p className="font-body text-sm sm:text-base md:text-lg lg:text-xl text-neutral-200 leading-relaxed sm:leading-loose max-w-2xl mx-auto md:mx-0 font-normal drop-shadow-sm">
           من سحر الزمرد والياقوت إلى جمال العقيق والأوبال، اكتشف عالمًا من
           الأحجار الكريمة وتعرّف على تفاصيلها وأسرارها وجمالها الفريد
         </p>
+
+        <a
+          href="#gemstones"
+          className="inline-block mt-2 font-body text-sm sm:text-base font-semibold tracking-wide border border-primary/80 text-primary px-7 py-3 hover:bg-primary hover:text-secondary transition-colors duration-300"
+        >
+          تصفّح التشكيلة
+        </a>
       </div>
     </section>
   );

@@ -1,27 +1,30 @@
 import type { Metadata } from "next";
-import { Cairo, Lalezar, Lemonada } from "next/font/google";
+import { Amiri, Aref_Ruqaa, El_Messiri } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const cairo = Cairo({
+/* Display — classical Naskh, jewelry-catalog titles */
+const amiri = Amiri({
   subsets: ["arabic", "latin"],
-  variable: "--font-cairo",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-display",
+  weight: ["400", "700"],
   display: "swap",
 });
 
-const lalezar = Lalezar({
+/* Accent — calligraphic Ruqaa for short luxury lines */
+const arefRuqaa = Aref_Ruqaa({
   subsets: ["arabic", "latin"],
-  variable: "--font-lalezar",
-  weight: "400",
+  variable: "--font-accent",
+  weight: ["400", "700"],
   display: "swap",
 });
 
-const lemonada = Lemonada({
+/* Body / UI — refined modern Arabic */
+const elMessiri = El_Messiri({
   subsets: ["arabic", "latin"],
-  variable: "--font-lemonada",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -39,12 +42,15 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={`${cairo.variable} ${lalezar.variable} ${lemonada.variable}`}
+      className={`${amiri.variable} ${arefRuqaa.variable} ${elMessiri.variable}`}
     >
-      <body suppressHydrationWarning className="font-cairo antialiased bg-[#FAF9F6] text-[#24211C] min-h-screen flex flex-col">
+      <body
+        suppressHydrationWarning
+        className="font-body antialiased bg-[#FAF9F6] text-[#24211C] min-h-screen flex flex-col"
+      >
         <Header />
         <div className="flex-1">{children}</div>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

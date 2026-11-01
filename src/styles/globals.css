@@ -9,11 +9,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Fonts */
-  --font-sans: var(--font-cairo), system-ui, -apple-system, sans-serif;
-  --font-cairo: var(--font-cairo), "Cairo", system-ui, sans-serif;
-  --font-lalezar: var(--font-lalezar), "Lalezar", system-ui, sans-serif;
-  --font-lemonada: var(--font-lemonada), "Lemonada", cursive, system-ui, sans-serif;
+  /* Fonts — luxury Arabic trio */
+  --font-sans: var(--font-body), "El Messiri", system-ui, sans-serif;
+  --font-body: var(--font-body), "El Messiri", system-ui, sans-serif;
+  --font-display: var(--font-display), "Amiri", serif;
+  --font-accent: var(--font-accent), "Aref Ruqaa", serif;
 
   /* Primary — Soft Gold #C6A75E */
   --color-primary-50: #F6F4EE;
@@ -70,135 +70,89 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-cairo), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body), "El Messiri", system-ui, sans-serif;
 }
 
-/* ===============================
-   Typography Classes per Font
-   (Title, Subtitle, Regular)
-=============================== */
-
-/* 1. Cairo  */
-.cairo-title {
-  font-family: var(--font-cairo), system-ui, sans-serif;
+/* Display — Amiri */
+.display-title {
+  font-family: var(--font-display), "Amiri", serif;
   font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.3;
-}
-.cairo-subtitle {
-  font-family: var(--font-cairo), system-ui, sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-.cairo-regular {
-  font-family: var(--font-cairo), system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-/* 2. Lalezar (لاليزار) */
-.lalezar-title {
-  font-family: var(--font-lalezar), system-ui, sans-serif;
-  font-weight: 400;
   font-size: 2.25rem;
-  line-height: 1.3;
+  line-height: 1.35;
 }
-.lalezar-subtitle {
-  font-family: var(--font-lalezar), system-ui, sans-serif;
+.display-subtitle {
+  font-family: var(--font-display), "Amiri", serif;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.5;
 }
-.lalezar-regular {
-  font-family: var(--font-lalezar), system-ui, sans-serif;
+
+/* Accent — Aref Ruqaa */
+.accent-title {
+  font-family: var(--font-accent), "Aref Ruqaa", serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
+.accent-line {
+  font-family: var(--font-accent), "Aref Ruqaa", serif;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* 3. Lemonada */
-.lemonada-title {
-  font-family: var(--font-lemonada), cursive, sans-serif;
+/* Body — El Messiri */
+.body-title {
+  font-family: var(--font-body), "El Messiri", system-ui, sans-serif;
   font-weight: 700;
-  font-size: 1.875rem;
-  line-height: 1.35;
-}
-.lemonada-subtitle {
-  font-family: var(--font-lemonada), cursive, sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-.lemonada-regular {
-  font-family: var(--font-lemonada), cursive, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-/* ===============================
-   Typography Classes per Font
-   (Title, Subtitle, Regular)
-=============================== */
-
-/* 1. Cairo (القاهرة) */
-.cairo-title {
-  font-family: var(--font-cairo), system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.3;
-}
-.cairo-subtitle {
-  font-family: var(--font-cairo), system-ui, sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-.cairo-regular {
-  font-family: var(--font-cairo), system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-/* 2. Lalezar (لاليزار) */
-.lalezar-title {
-  font-family: var(--font-lalezar), system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 2.25rem;
-  line-height: 1.3;
-}
-.lalezar-subtitle {
-  font-family: var(--font-lalezar), system-ui, sans-serif;
-  font-weight: 400;
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.4;
 }
-.lalezar-regular {
-  font-family: var(--font-lalezar), system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
-
-/* 3. Lemonada (ليمونادا) */
-.lemonada-title {
-  font-family: var(--font-lemonada), cursive, sans-serif;
-  font-weight: 700;
-  font-size: 1.875rem;
-  line-height: 1.35;
-}
-.lemonada-subtitle {
-  font-family: var(--font-lemonada), cursive, sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-.lemonada-regular {
-  font-family: var(--font-lemonada), cursive, sans-serif;
+.body-regular {
+  font-family: var(--font-body), "El Messiri", system-ui, sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
+}
+
+/* Subtle entrance motion */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delayed {
+  animation: fade-up 0.8s ease-out 0.15s both;
+}
+
+.scroll-reveal {
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.scroll-reveal[data-revealed="false"] {
+  opacity: 0;
+  transform: translateY(1.25rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
