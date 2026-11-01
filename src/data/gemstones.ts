@@ -23,7 +23,7 @@ export const gemstoneImages = [
   {
     id: "sapphire",
     src: "/polished-sapphire.png",
-    alt: "ياقوت أزرق مصقول",
+    alt: "زفير ازرق",
   },
   {
     id: "emerald",
@@ -43,7 +43,7 @@ export const gemstoneImages = [
   {
     id: "amethyst",
     src: "/Amethyst.png",
-    alt: "جمشت مصقول",
+    alt: "اماتيست مصقول",
   },
   {
     id: "amber",
@@ -68,8 +68,8 @@ export const gemstones: Gemstone[] = [
   {
     id: "1",
     slug: "sapphire-2-05-no-heat",
-    name: "ياقوت أزرق",
-    title: "ياقوت أزرق طبيعي ٢٫٠٥ قيراط بدون معالجة حرارية",
+    name: "زفير أزرق",
+    title: "زفير أزرق طبيعي ٢٫٠٥ قيراط بدون معالجة حرارية",
     price: 294241,
     currency: "ج.م",
     inStock: true,
@@ -79,7 +79,7 @@ export const gemstones: Gemstone[] = [
     images: [getGemImage("sapphire"), getGemImage("sapphire")],
     accent: "#1F4E8C",
     specs: [
-      { label: "الحجر", value: "ياقوت أزرق (Sapphire)" },
+      { label: "الحجر", value: "زفير أزرق (Sapphire)" },
       { label: "المنشأ", value: "غير محدد" },
       { label: "الوزن", value: "٢٫٠٥ قيراط" },
       { label: "الشكل", value: "بيضاوي – بريليانت" },
@@ -172,8 +172,8 @@ export const gemstones: Gemstone[] = [
   {
     id: "5",
     slug: "amethyst-3-80",
-    name: "جمشت",
-    title: "جمشت طبيعي ٣٫٨٠ قيراط",
+    name: "اماتيست",
+    title: "اماتيست طبيعي ٣٫٨٠ قيراط",
     price: 42800,
     currency: "ج.م",
     inStock: true,
