@@ -41,7 +41,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-primary-500/20 bg-[#FAF9F6]/95 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex h-16 items-center justify-between sm:h-[4.5rem]">
+        <div className="flex h-16 items-center justify-between sm:h-18">
           <Link href="/" className="group inline-flex items-center gap-2">
             <Image
               src="/logo_navy.png"
@@ -98,7 +98,7 @@ export default function Header() {
                 strokeWidth={1.5}
               />
               {cartCount > 0 && (
-                <span className="absolute -end-0.5 -top-0.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-primary-600 px-1 font-body text-[10px] font-semibold text-white">
+                <span className="absolute -inset-e-0.5 -top-0.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-primary-600 px-1 font-body text-[10px] font-semibold text-white">
                   {cartCount}
                 </span>
               )}

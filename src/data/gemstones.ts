@@ -146,7 +146,7 @@ export const gemstones: Gemstone[] = [
   {
     id: "4",
     slug: "aquamarine-4-50",
-    name: "زبرجد",
+    name: "اكوامارين",
     title: "زبرجد طبيعي ٤٫٥٠ قيراط",
     price: 87500,
     currency: "ج.م",

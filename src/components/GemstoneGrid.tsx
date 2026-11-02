@@ -1,7 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Search01Icon } from "@hugeicons/core-free-icons";
+import {
+  GridViewIcon,
+  ListViewIcon,
+  Search01Icon,
+} from "@hugeicons/core-free-icons";
 import { searchGemstones } from "@/data/gemstones";
 import GemstoneCard from "@/components/GemstoneCard";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -9,6 +14,7 @@ import { useStore } from "@/components/StoreProvider";
 
 export default function GemstoneGrid() {
   const { searchTerm, setSearchTerm } = useStore();
+  const [view, setView] = useState<"grid" | "list">("grid");
   const visibleGemstones = searchGemstones(searchTerm);
 
   return (
@@ -44,11 +50,47 @@ export default function GemstoneGrid() {
           )}
         </header>
 
+        <div className="mb-8 flex justify-end">
+          <div
+            role="group"
+            aria-label="طريقة عرض الأحجار"
+            className="inline-flex rounded-sm border border-secondary/10 bg-white/70 p-1 shadow-[0_4px_16px_rgba(31,42,68,0.05)]"
+          >
+            <button
+              type="button"
+              aria-pressed={view === "grid"}
+              onClick={() => setView("grid")}
+              className={`inline-flex min-h-10 items-center gap-2 px-3 font-body text-xs transition-colors sm:px-4 sm:text-sm ${view === "grid" ? "bg-secondary text-white shadow-sm" : "text-secondary/65 hover:text-secondary"}`}
+            >
+              <HugeiconsIcon icon={GridViewIcon} size={17} strokeWidth={1.6} />
+              شبكة
+            </button>
+            <button
+              type="button"
+              aria-pressed={view === "list"}
+              onClick={() => setView("list")}
+              className={`inline-flex min-h-10 items-center gap-2 px-3 font-body text-xs transition-colors sm:px-4 sm:text-sm ${view === "list" ? "bg-secondary text-white shadow-sm" : "text-secondary/65 hover:text-secondary"}`}
+            >
+              <HugeiconsIcon icon={ListViewIcon} size={17} strokeWidth={1.6} />
+              قائمة
+            </button>
+          </div>
+        </div>
+
         {visibleGemstones.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 sm:gap-y-16">
+          <div
+            className={
+              view === "grid"
+                ? "grid grid-cols-2 gap-x-3 gap-y-5 sm:gap-x-8 sm:gap-y-12 lg:grid-cols-3"
+                : "flex flex-col gap-4 sm:gap-6"
+            }
+          >
             {visibleGemstones.map((gem, i) => (
-              <ScrollReveal key={gem.id} delay={(i % 3) * 90}>
-                <GemstoneCard gemstone={gem} />
+              <ScrollReveal
+                key={gem.id}
+                delay={view === "grid" ? (i % 3) * 90 : Math.min(i, 5) * 60}
+              >
+                <GemstoneCard gemstone={gem} view={view} />
               </ScrollReveal>
             ))}
           </div>
